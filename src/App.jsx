@@ -335,8 +335,8 @@ function App() {
         </section>
 
         <section className="section events" id="acara" data-reveal="section">
-          <SectionTitle label="Hari yang kami nantikan">
-            Catat tanggalnya.
+          <SectionTitle>
+            Hari yang kami nantikan
           </SectionTitle>
           <div className="events__grid">
             {wedding.events.map((event) => (
