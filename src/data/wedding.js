@@ -29,6 +29,10 @@ export const wedding = {
       alt: "Potret mempelai pria.",
     },
   ],
+  location: {
+    title: "Lokasi Akad & Resepsi",
+    mapUrl: "https://maps.app.goo.gl/2b6DRTjuXnRTeGNH7",
+  },
   events: [
     {
       label: "Akad",
@@ -36,9 +40,6 @@ export const wedding = {
       title: "Akad Nikah",
       dateLabel: "Jumat, 16 April 2027",
       time: "Pukul 09.00 WIB",
-      venue: "Lokasi akad & resepsi",
-      address: "Lihat lokasi pada Google Maps.",
-      mapUrl: "https://maps.app.goo.gl/2b6DRTjuXnRTeGNH7",
     },
     {
       label: "Resepsi",
@@ -46,9 +47,6 @@ export const wedding = {
       title: "Resepsi",
       dateLabel: "Jumat, 16 April 2027",
       time: "Pukul 10.00 WIB s/d Selesai",
-      venue: "Lokasi akad & resepsi",
-      address: "Lihat lokasi pada Google Maps.",
-      mapUrl: "https://maps.app.goo.gl/2b6DRTjuXnRTeGNH7",
     },
   ],
   story: [

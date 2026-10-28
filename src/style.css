@@ -460,8 +460,7 @@ h4 {
   font-size: 1.1rem;
 }
 
-.event-card__time,
-.event-card__address {
+.event-card__time {
   color: var(--color-muted);
   font-size: 0.64rem;
   line-height: 1.8;
@@ -471,22 +470,49 @@ h4 {
   margin-bottom: 15px;
 }
 
-.event-card__divider {
-  display: block;
-  width: 28px;
-  height: 1px;
-  margin: 0 auto 18px;
-  background: #a7a493;
-}
-
-.event-card h4 {
-  margin-bottom: 4px;
+.event-location {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  max-width: 420px;
+  margin: 18px auto 0;
+  padding: 17px 18px;
+  border: 1px solid rgb(105 111 83 / 22%);
+  background: var(--color-paper);
   color: var(--color-olive);
-  font-size: 1.35rem;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease;
 }
 
-.event-card__address {
-  margin-bottom: 19px;
+.event-location:hover {
+  border-color: rgb(105 111 83 / 48%);
+  background: #f2eee4;
+}
+
+.event-location > .icon:first-child {
+  width: 19px;
+  height: 19px;
+}
+
+.event-location > .icon:last-child {
+  width: 16px;
+  height: 16px;
+}
+
+.event-location__copy {
+  display: grid;
+  gap: 4px;
+}
+
+.event-location__copy strong {
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.event-location__copy small {
+  color: var(--color-muted);
+  font-size: 0.61rem;
 }
 
 .story {

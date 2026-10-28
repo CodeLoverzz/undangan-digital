@@ -350,28 +350,25 @@ function App() {
                 <h3>{event.title}</h3>
                 <p className="event-card__date">{event.dateLabel}</p>
                 <p className="event-card__time">{event.time}</p>
-                <span className="event-card__divider" aria-hidden="true" />
-                <h4>{event.venue}</h4>
-                <p className="event-card__address">{event.address}</p>
-                {event.mapUrl ? (
-                  <a
-                    className="button button--outline"
-                    href={event.mapUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Icon name="pin" />
-                    Buka Google Maps
-                  </a>
-                ) : (
-                  <button className="button button--outline" disabled>
-                    <Icon name="pin" />
-                    Tautan peta belum diisi
-                  </button>
-                )}
               </article>
             ))}
           </div>
+          {wedding.location.mapUrl && (
+            <a
+              className="event-location"
+              data-reveal="item"
+              href={wedding.location.mapUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icon name="pin" />
+              <span className="event-location__copy">
+                <strong>{wedding.location.title}</strong>
+                <small>Ketuk untuk melihat lokasi</small>
+              </span>
+              <Icon name="arrow" />
+            </a>
+          )}
         </section>
 
         <section className="section story" id="cerita" data-reveal="section">
