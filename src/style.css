@@ -940,3 +940,50 @@ html.reveal-ready [data-reveal="item"]:nth-of-type(even) {
     animation-delay: 0ms !important;
   }
 }
+
+.admin-page {
+  min-height: 100vh;
+  padding: 32px clamp(18px, 5vw, 64px) 64px;
+  background: var(--color-background);
+}
+
+
+.admin-header,
+.admin-layout {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0 32px;
+}
+
+.admin-header > div { margin-right: auto; }
+
+.admin-header h1 { margin: 6px 0; font-size: clamp(2.4rem, 6vw, 4rem); }
+.admin-header p:not(.eyebrow), .admin-help { color: var(--color-muted); font-size: 0.8rem; line-height: 1.7; }
+.admin-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.7fr); align-items: start; gap: 22px; }
+.admin-form { display: grid; gap: 16px; }
+.admin-card, .admin-preview { padding: clamp(20px, 4vw, 32px); background: var(--color-paper); }
+.admin-card h2, .admin-preview h2 { margin-bottom: 20px; font-size: 1.9rem; }
+.admin-subsection { display: grid; gap: 12px; padding: 18px 0; border-top: 1px solid #e3ddd1; }
+.admin-subsection h3 { margin: 0; font-size: 1.45rem; }
+.admin-field { display: grid; gap: 7px; color: #626858; font-size: 0.72rem; }
+.admin-field input { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #d9d4c9; border-radius: 2px; background: #fffdf8; color: #41473d; }
+.admin-field input:focus { border-color: #718069; }
+.admin-preview { position: sticky; top: 20px; }
+.admin-preview h2 { margin: 10px 0; font-size: 2.5rem; }
+.admin-preview > p:not(.eyebrow) { color: var(--color-muted); font-size: 0.78rem; }
+.admin-preview img { display: block; width: 100%; aspect-ratio: 3 / 4; margin: 20px 0; object-fit: cover; }
+.admin-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.admin-actions > span { color: var(--color-olive); font-size: 0.75rem; }
+
+@media (max-width: 760px) {
+  .admin-header { align-items: flex-start; flex-direction: column; }
+  .admin-layout { grid-template-columns: 1fr; }
+  .admin-preview { position: static; }
+}

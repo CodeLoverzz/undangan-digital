@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { wedding } from "./data/wedding.js";
+import { loadWedding } from "./data/weddingStore.js";
 
 function Photo({ image, className = "", loading = "lazy", ...props }) {
   return (
@@ -102,6 +102,7 @@ function formatCountdown(targetDate, now) {
 }
 
 function App() {
+  const [wedding] = useState(loadWedding);
   const audioRef = useRef(null);
   const [opened, setOpened] = useState(false);
   const [musicPlaying, setMusicPlaying] = useState(false);
